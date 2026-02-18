@@ -1,0 +1,15 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - N8N_HOOKS_PATH=/opt/n8n/hooks/execution-hooks.js
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./hooks:/opt/n8n/hooks
+
+volumes:
+  n8n_data:
