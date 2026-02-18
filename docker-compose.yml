@@ -8,7 +8,7 @@ services:
     environment:
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
-      - N8N_HOOKS_PATH=/opt/n8n/hooks/execution-hooks.js
+      - N8N_HOOKS_PATH=/home/node/.n8n/hooks/execution-hooks.js
     volumes:
       - n8n_data:/home/node/.n8n
       - ./hooks:/home/node/.n8n/hooks
