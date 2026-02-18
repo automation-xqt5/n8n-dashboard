@@ -11,7 +11,7 @@ services:
       - N8N_HOOKS_PATH=/opt/n8n/hooks/execution-hooks.js
     volumes:
       - n8n_data:/home/node/.n8n
-      - ./hooks:/opt/n8n/hooks
+      - ./hooks:/home/node/.n8n/hooks
 
 volumes:
   n8n_data:
