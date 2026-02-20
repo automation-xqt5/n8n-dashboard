@@ -12,7 +12,7 @@ async function logToSupabase(data) {
   }
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/n8n_execution_logs`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/n8n_execution_logs_eduard`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
